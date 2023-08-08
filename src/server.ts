@@ -8,8 +8,8 @@ dotenv.config()
 
 const app: Express = express()
 app.use(express.json())
-app.use(cors)
-const port = process.env.PORT
+app.use(cors())
+const port = process.env.PORT || 8080
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server')
