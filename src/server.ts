@@ -1,10 +1,7 @@
 import express, { Express, Request, Response } from 'express'
 import routerApi from './routes'
 import cors from 'cors'
-import dotenv from 'dotenv'
 import { boomErrorHandler, errorHandler } from './middlewares'
-
-dotenv.config()
 
 const app: Express = express()
 app.use(express.json())
